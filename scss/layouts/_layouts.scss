@@ -1,0 +1,119 @@
+.product {
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: $white;
+
+  &-img {
+
+    &__desktop {
+      display: none;
+    }
+  }
+
+  &-body {
+    padding: 20px 15px;
+
+    .product-category {
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-family: $family-montserrat;
+      margin-bottom: 5px;
+      font-size: 12px;
+    }
+
+    .product-name {
+      margin-bottom: 5px;
+    }
+
+    .product-description {
+      margin-bottom: 25px;
+      line-height: 20px;
+      font-size: 13px;
+    }
+
+    .product-prices {
+      gap: 25px;
+      margin-bottom: 15px;
+
+      &__new {
+        color: $dark-cyan;
+        font-size: 28px;
+        font-family: $family-fraunces;
+      }
+
+      &__old {
+        text-decoration: line-through;
+      }
+    }
+
+    .btn {
+      width: 100%;
+      background-color: $dark-cyan;
+      transition: background-color 0.2s ease;
+      color: $white;
+      font-weight: bold;
+      gap: 5px;
+      height: 50px;
+      border-radius: 4px;
+
+      &:hover {
+        background-color: $very-dark-cyan;
+      }
+    }
+  }
+
+  /* Breakpoint 375 */
+  @media screen and (min-width: 375px) {
+    width: 350px;
+    .product-name {
+      font-size: 32px;
+      line-height: 32px;
+      margin-bottom: 10px;
+    }
+
+    .product-description {
+      font-size: 14px;
+      margin-bottom: 35px;
+    }
+  }
+
+  /* Breakpoint 1020px */
+  @media screen and (min-width: 1020px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 550px;
+
+    &-img {
+
+      &__desktop {
+        display: flex;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      &__mobile {
+        display: none;
+      }
+    }
+
+    &-body {
+      padding: 30px;
+
+      .product-category {
+        margin-bottom: 10px;
+      }
+
+      .product-name {
+        font-size: 28px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+}
+
+.attribution {
+  margin-top: 10px;
+  font-size: 14px;
+  text-align: center;
+}

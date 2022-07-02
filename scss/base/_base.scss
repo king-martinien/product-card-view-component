@@ -1,0 +1,49 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::selection {
+  background-color: $dark-cyan;
+  color: $white;
+}
+
+html, body {
+  min-height: 100vh;
+}
+
+body {
+  font-family: $family-montserrat;
+  background-color: $cream;
+  color: $dark-grayish-blue;
+  padding: 5px;
+
+  @media screen and (min-width: 375px) {
+    padding: 15px;
+  }
+}
+
+button {
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+@for $index from 1 through 6 {
+  h#{$index} {
+    font-family: $family-fraunces;
+    color: $very-dark-blue;
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+  -webkit-user-drag: none;
+}
+
+p {
+  font-size: $fs-14;
+  font-weight: $fw-light;
+}
